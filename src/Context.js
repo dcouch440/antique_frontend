@@ -9,6 +9,8 @@ function ContextProvider (props) {
     id: undefined, username: undefined, email: undefined, admin: false
   });
 
+  axios.defaults.baseURL = 'https://agile-fjord-22145.herokuapp.com/';
+
   OnlineStatus({ currentUser });
   console.log(currentUser);
   useEffect(() => {

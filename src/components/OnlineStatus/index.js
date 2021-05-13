@@ -8,7 +8,7 @@ export default function OnlineStatus ({ currentUser }) {
       return;
     }
 
-    const socket = io('http://localhost:4000', { withCredentials: true });
+    const socket = io('https://agile-fjord-22145.herokuapp.com/:4000', { withCredentials: true });
     socket.emit( LOGIN, { id: currentUser.id, username: currentUser.username } );
 
     return () => socket.disconnect();

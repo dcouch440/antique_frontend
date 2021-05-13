@@ -20,7 +20,7 @@ export default function Socket (roomId) {
     if (!currentUser.username) {
       return;
     }
-    socketRef.current = io('http://localhost:4001', { withCredentials: true });
+    socketRef.current = io('https://agile-fjord-22145.herokuapp.com/:4001', { withCredentials: true });
 
     socketRef.current.on(MESSAGE, msg => {
       setMessages(prevMsgs => [...prevMsgs, msg.message]);
